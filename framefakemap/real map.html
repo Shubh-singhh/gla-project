@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <title>Interactive Image Map</title></head>
-    
+    <title>Interactive Image Map</title>
+    <style>
+        .container {
+            width: 75%;
+            /* change width value */
+        }
+
+        #map {
+            height: 250px;
+            /* change height here*/
+        }
+    </style>
+
+</head>
 
 
-    <body>
-        <div id="map" style="height: 600px;">
+
+<body>
+    <div class="container">
+        <div id="map">
         </div>
-   
+    </div>
+
     <script>
         console.log("java on");
-        // Initialize the map
-var map = L.map('map').setView([51.505, -0.09], 13);
-// Add OpenStreetMap tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-}).addTo(map);
-// Add a marker to the map
-var marker = L.marker([51.5, -0.09]).addTo(map);
 
-
-    
-      
+        var map = L.map('map').setView([27.482269461838406, 77.66629772399595], 13);
+        // Add OpenStreetMap tile 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        }).addTo(map);
+        var marker1 = L.marker([27.482269461838406, 77.66629772399595]).addTo(map);
+        var marker2 = L.marker([27.495453060856512, 77.68070170940764]).addTo(map);
+        var marker3 = L.marker([27.48533985013022, 77.68847301291039]).addTo(map);
+        var marker4 = L.marker([27.481114644308978, 77.69954223086752]).addTo(map);
+        var marker5 = L.marker([27.499330828832314, 77.68532656102064]).addTo(map);
+        var marker6 = L.marker([27.49290973355608, 77.65689461413675]).addTo(map);
+        var marker7 = L.marker([27.481569386692744, 77.67503148085193]).addTo(map);
+        var marker8 = L.marker([27.477693212848987, 77.6640333516139]).addTo(map);
+        var marker9 = L.marker([27.461832876757647, 77.67211120410315]).addTo(map);
+        marker1.bindTooltip("🙁 not clean").openPopup();
+        marker2.bindTooltip("😍 clean and green").openPopup();
+        marker3.bindTooltip("😊 neat and clean").openTooltip();
+        marker4.bindTooltip("😍 clean and green").openPopup();
+        marker5.bindTooltip("😓 not so clean").openPopup();
+        marker6.bindTooltip("😍 clean and awesome").openPopup();
+        marker7.bindTooltip("🤗 clean and nice").openPopup();
+        marker8.bindTooltip("😓 not so clean").openPopup();
+        marker9.bindTooltip("🙁 not clean").openPopup();
     </script>
+ 
 
 
-   
 </body>
+
 </html>

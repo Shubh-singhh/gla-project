@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   
-    <title>Interactive Image Map</title>
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
-    <style>
-.map {
-  width: 50%;
-  height: 50%;
-  overflow-y: scroll;
-  overflow-wrap: scroll;
-  scrollbar-width: none; /* Hide scroll bars for Firefox */
-  -ms-overflow-style: none; /* Hide scroll bars for IE/Edge */
-  
-}
-.map::-webkit-scrollbar {
-    display: none; /*Hide scroll bars for chrome*/
-}
-</style>
-   
+
+  <title>Interactive Image Map</title>
+  <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+  <style>
+    .map {
+      width: 75%;
+      height: 75%;
+      overflow-y: scroll;
+      overflow-wrap: scroll;
+      scrollbar-width: none;
+      /* Hide scroll bars for Firefox */
+      -ms-overflow-style: none;
+      /* Hide scroll bars for IE/Edge */
+
+    }
+
+    .map::-webkit-scrollbar {
+      display: none;
+      /*Hide scroll bars for chrome*/
+    }
+  </style>
+
 </head>
+
 <body>
-    <div class="map">
-        <img id="image" src="mapimage.png" alt="Interactive Map" draggable="false" style="height: 100%; width: 100%; scale: 2.75;">
-    </div>
+  <div class="map">
+    <img id="image" src="mapimage.png" alt="Interactive Map" draggable="false"
+      style="height: 100%; width: 100%; scale: 2.75;">
+  </div>
 </body>
+
 </html>
