@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Interactive Image Map</title>
+    <style>
+.map {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  scrollbar-width: none; /* Hide scroll bars for Firefox */
+  -ms-overflow-style: none; /* Hide scroll bars for IE/Edge */
+  
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+/* Initial zoom level */
+  transform-origin: top left;
+}
+
+    </style>
+    <script>
+        console.log("java on");
+        
+        const zoomContainer = document.querySelector('.map');
+const zoomImage = document.querySelector('#image');
+zoomImage.style.transform = `scale(5)`;
+zoomContainer.addEventListener('wheel', function(event) {
+  event.preventDefault();
+
+  const zoomIntensity = 0.5; // adjust the zoom intensity as needed
+  let zoomLevel = 1;
+
+  if (event.deltaY < 0) {
+    zoomLevel += zoomIntensity;
+  } else {
+    zoomLevel -= zoomIntensity;
+  }
+
+  zoomImage.style.transform = `scale(${zoomLevel})`;
+});
+    
+      
+    </script>
+</head>
+<body>
+    <div class="map">
+        <img id="image" src="/mapimage.jpeg" alt="Interactive Map" draggable="false">
+    </div>
+</body>
+</html>
