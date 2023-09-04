@@ -5,19 +5,28 @@
     <title>Interactive Image Map</title>
     <style>
 .map {
-  width: 400px;
-  height: 300px;
-  overflow: hidden;
+  width: 50%;
+  height: 50%;
+  overflow-y: scroll;
+  overflow-wrap: scroll;
   scrollbar-width: none; /* Hide scroll bars for Firefox */
   -ms-overflow-style: none; /* Hide scroll bars for IE/Edge */
   
 }
+.map::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.map {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */}
 
 #image {
   width: 100%;
   height: 100%;
   transition: transform 0.2s ease-in-out;
-/* Initial zoom level */
+  scale: 2.75;
   transform-origin: top left;
 }
 
@@ -48,7 +57,7 @@ zoomContainer.addEventListener('wheel', function(event) {
 </head>
 <body>
     <div class="map">
-        <img id="image" src="/mapimage.jpeg" alt="Interactive Map" draggable="false">
+        <img id="image" src="mapimage.jpg" alt="Interactive Map" draggable="false">
     </div>
 </body>
 </html>
