@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Interactive Image Map</title></head>
+    
+
+
+    <body>
+        <div id="map" style="height: 800px;">
+        </div>
+   
+    <script>
+        console.log("java on");
+        // Initialize the map
+var map = L.map('map').setView([51.505, -0.09], 13);
+// Add OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+}).addTo(map);
+// Add a marker to the map
+var marker = L.marker([51.5, -0.09]).addTo(map);
+
+
+    
+      
+    </script>
+
+
+   
+</body>
+</html>
