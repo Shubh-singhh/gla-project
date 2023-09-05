@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SignIn&SignUp</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-  
+   
   </head>
-  <body>
+  <body> 
+    <!-- script is  buggy -->
+    
+    <!-- <script> console.log("heloooooo");
+     
+    const adhh =  document.getElementById("adhnum");
+    const phnh = document.getElementById("phnum");
+    console.log( phnh.getAttribute("required"));
+     console.log( adhh.getAttribute("required"));
+      function adhnumon(){
+       
+        phnh.setAttribute("required","foo");
+        console.log("adh on");
+       
+
+      }
+      function phnumon(){
+        adhh.getAttribute("required"); 
+        adhh.setAttribute("required","foo");
+        console.log("phn on");
+    }
+      function adhnumoff(){
+        phnh.getAttribute("foo"); 
+        phnh.setAttribute("foo","required");
+        console.log("adh off");
+      }
+      function phnumoff(){
+        adhh.getAttribute("foo"); 
+        adhh.setAttribute("foo","required");
+      console.log("phn off");
+    }
+    </script> -->
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -19,16 +46,16 @@
             <h2 class="title">User Log In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="tel" placeholder="Adhaar Number*" pattern="[0-9]{12}" title="Adhaar Number (XXXX-XXXX-XXXX)" required/>
-            </div>
+              <input id='adhnum' type="tel" placeholder="Adhaar Number*" pattern="[0-9]{12}" title="Adhaar Number (1234-1234-1234)" maxlength="12" autocomplete="off" autofocus required>
+            </div> 
             <h2 class="title">Or </h2>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="tel" placeholder="Phone Number*" pattern="[0-9]{10}"  title="Phone Number (XXX-XXX-XXXX)" required/>
+              <input id='phnum' type="tel" placeholder="Phone Number*" pattern="[0-9]{10}"  title="Phone Number (123-123-123)" maxlength="10" autocomplete="off" >
             </div>
             <input type="submit" value="Get OTP" class="btn solid" />
 
-            <p class="social-text">Need help to Log In? <a herf="www.google.com" >click here</p>
+            <a class="social-text" href="https://www.google.com/">Need help to Log In? </a>
             
           </form>
 
@@ -37,7 +64,7 @@
             <h2 class="title">Business Log In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="tel" placeholder="CIN*"  pattern="[A-B][0-9]{16}"  title="Corporate Identification Number (U/L-XXXXX-AB-XXXX-ABC-XXXXXX)" required/>
+              <input type="tel" placeholder="CIN*"  pattern=".{16}" maxlength="16" title="Corporate Identification Number (U/L-12345-AB-1234-ABC-123456)" required>
             </div>
             
             <input type="submit" value="Continue" class="btn solid" />
@@ -68,7 +95,7 @@
                 <p>Get solutions for related small or big businesses and corporates.</p>
                 <button class="btn transparent" id="sign-up-btn">Continue</button>
             </div>
-            <img src="./img/log.svg" class="image" alt="">
+         
         </div>
 
         <div class="panel right-panel">
