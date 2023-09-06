@@ -138,30 +138,32 @@ h2.cus-num {
     position: relative;
 }
 
-h2.cus-num:after {
+td:hover{
+    cursor: pointer;
+    background-color: #ccc;
+  }
+h2.cus-comp:after {
     position: absolute;
-    content: "\f0c0";
-    font-family: "FONTAWESOME";
-    right: 0;
-}
-
-h2.cus-pro:after {
-    position: absolute;
-    content: "\f15b";
+    content: "\f0c5";
     font-family: "FONTAWESOME";
     right: 0;
 }
 
 h2.cus-ord:after {
     position: absolute;
-    content: "\f1c1";
+    content: "\f218";
     font-family: "FONTAWESOME";
     right: 0;
 }
-
-h2.cus-inc:after {
+h2.cus-bid:after {
     position: absolute;
-    content: "\f0d6";
+    content: "\f156";
+    font-family: "FONTAWESOME";
+    right: 0;
+}
+h2.cus-eve:after {
+    position: absolute;
+    content: "\f11e";
     font-family: "FONTAWESOME";
     right: 0;
 }
