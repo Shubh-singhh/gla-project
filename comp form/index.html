@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Contact Form 03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+        nonce="d042f8df-40ba-4b6d-9256-8f44e4d112d3">(function (w, d) { !function (bg, bh, bi, bj) { bg[bi] = bg[bi] || {}; bg[bi].executed = []; bg.zaraz = { deferred: [], listeners: [] }; bg.zaraz.q = []; bg.zaraz._f = function (bk) { return async function () { var bl = Array.prototype.slice.call(arguments); bg.zaraz.q.push({ m: bk, a: bl }) } }; for (const bm of ["track", "set", "debug"]) bg.zaraz[bm] = bg.zaraz._f(bm); bg.zaraz.init = () => { var bn = bh.getElementsByTagName(bj)[0], bo = bh.createElement(bj), bp = bh.getElementsByTagName("title")[0]; bp && (bg[bi].t = bh.getElementsByTagName("title")[0].text); bg[bi].x = Math.random(); bg[bi].w = bg.screen.width; bg[bi].h = bg.screen.height; bg[bi].j = bg.innerHeight; bg[bi].e = bg.innerWidth; bg[bi].l = bg.location.href; bg[bi].r = bh.referrer; bg[bi].k = bg.screen.colorDepth; bg[bi].n = bh.characterSet; bg[bi].o = (new Date).getTimezoneOffset(); if (bg.dataLayer) for (const bt of Object.entries(Object.entries(dataLayer).reduce(((bu, bv) => ({ ...bu[1], ...bv[1] })), {}))) zaraz.set(bt[0], bt[1], { scope: "page" }); bg[bi].q = []; for (; bg.zaraz.q.length;) { const bw = bg.zaraz.q.shift(); bg[bi].q.push(bw) } bo.defer = !0; for (const bx of [localStorage, sessionStorage]) Object.keys(bx || {}).filter((bz => bz.startsWith("_zaraz_"))).forEach((by => { try { bg[bi]["z_" + by.slice(7)] = JSON.parse(bx.getItem(by)) } catch { bg[bi]["z_" + by.slice(7)] = bx.getItem(by) } })); bo.referrerPolicy = "origin"; bo.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bg[bi]))); bn.parentNode.insertBefore(bo, bn) };["complete", "interactive"].includes(bh.readyState) ? zaraz.init() : bg.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Contact Form #03</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row mb-5">
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Email:</span> <a
+                                                href="/cdn-cgi/l/email-protection#eb82858d84ab92849e9998829f8ec5888486"><span
+                                                    class="__cf_email__"
+                                                    data-cfemail="e980878f86a990869c9b9a809d8cc78a8684">[email&#160;protected]</span></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-globe"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">Contact Us</h3>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div id="form-message-success" class="mb-4">
+                                        Your message was sent, thank you!
+                                    </div>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Full Name</label>
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                        placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Email Address</label>
+                                                    <input type="email" class="form-control" name="email" id="email"
+                                                        placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="subject">Subject</label>
+                                                    <input type="text" class="form-control" name="subject" id="subject"
+                                                        placeholder="Subject">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Message</label>
+                                                    <textarea name="message" class="form-control" id="message" cols="30"
+                                                        rows="4" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <script src="js/main.js"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+        integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+        data-cf-beacon='{"rayId":"802dbd765dd0f3ad","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
