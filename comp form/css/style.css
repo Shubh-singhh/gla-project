@@ -1244,6 +1244,16 @@ pre code {
     max-width: 41.66667%;
   }
 
+  .container {
+    width: 75%;
+    /* change width value */
+}
+
+#map {
+    height: 500px;
+    /* change height here*/
+}
+
   .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
@@ -1252,6 +1262,7 @@ pre code {
   }
 
   .col-md-7 {
+    
     -webkit-box-flex: 0;
     -ms-flex: 0 0 58.33333%;
     flex: 0 0 58.33333%;
@@ -11915,6 +11926,7 @@ textarea.form-control {
   border-color: #2d9bb7 !important;
   background: #2d9bb7 !important;
 }
+
 
 .contactForm .label {
   color: #000;
