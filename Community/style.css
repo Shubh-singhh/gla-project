@@ -30,8 +30,10 @@ body{
     background: #f5f5f5;
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark);
-    background-image:linear-gradient(to bottom, orange, white ,green);
+    background-image:repeating-linear-gradient(to bottom, rgb(237, 133, 20), white ,rgb(0, 162, 0));
     overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container{
     width: 80%;
@@ -39,9 +41,9 @@ body{
     padding: 0 20px;
 }
 .profile-photo{
-    width: 2.7rem;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+    width: 3.5rem;
+    aspect-ratio: auto;
+    border-radius: 40%;
     overflow: hidden;
 }
 img{
@@ -183,8 +185,8 @@ main .container .left .profile{
     margin-left: 2rem;
     position: relative;
 }
-.left .sidebar i .notification-count{
-    position: absolute;
+.left .sidebar i .notification-count, .notification-count{
+    position: relative;
     top: -0.5rem;
     right: -0.5rem;
     background-color: var(--color-danger);
@@ -287,6 +289,7 @@ main .container .left .profile{
 }
 .middle .feed .photo{
     border-radius: var(--card-border-radius);
+    
     overflow: hidden;
     margin: 0.5rem 0;
 }
