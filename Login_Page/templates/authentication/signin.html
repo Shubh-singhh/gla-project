@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>signin Page</title>
+<link rel="stylesheet" href="{% static 'authentication/css/signin_css.css' %}">
+</head>
+<body>
+
+
+{% comment %} this is for notification -> email sent/account created {% endcomment %}
+  {%for message in messages %}
+  <div class="alert alert-{{ messages.tags}} alert-dismissible fade show" role="alert">
+      <strong>Message: </strong> {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times</span>
+      </button>
+  </div>
+  {%endfor%}
+
+
+{% comment %} userlogin section {% endcomment %}
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="/signin" method="post" class="sign-in-form">
+         
+          <h2 class="title">User Log In</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            {% csrf_token %}
+            <input id='username' name="username" type="text" placeholder="enter your username" maxlength="12" autocomplete="off" autofocus required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            {% csrf_token %}
+            <input id="pass1" name="pass1" type="password" placeholder="enter your password" maxlength="10" autocomplete="off" >
+          </div>
+          <button type="submit" class="btn solid" >Signin</button>
+
+          <a class="social-text" href="https://www.google.com/">Need help to Log In? </a>
+          
+        </form>
+
+
+
+{% comment %} this is the signup section of this page {% endcomment %}
+        <form action="/signup" method ="post" class="sign-up-form">
+            {% csrf_token %}
+            <h2 class="title">User Log In</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="create a username (only letters and numebrs)" Required>
+            </div>
+            <div class="input-field">
+            <i class="fas fa-lock"></i>
+                <input type="text" id="fname" name="fname" placeholder="Enter you first name" Required>
+                </div>
+                <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="text" id="lname" name="lname" placeholder="enter your last name" Required>
+            </div>
+                <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="email" id="email" name="email" placeholder="enter your email adderss" Required>
+            </div>
+                <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pass1" name="pass1" placeholder="enter your password" Required>
+            </div>
+                <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pass2" name="pass2" placeholder="confirm your password" Required>
+            </div>
+                <button type="submit" class="btn solid">Sign up</button>
+            </form>
+
+{% comment %} this is the footer section of signup page {% endcomment %}
+            <p class="social-text">For any enquiry or help. </p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="panels-container">
+
+{% comment %} this is for the animation view left panel {% endcomment %}
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New Here?</h3>
+                <p>To create account click here.</p>
+                <button class="btn transparent" id="sign-up-btn">Continue</button>
+            </div>
+         
+        </div>
+
+
+{% comment %} this is for the animation view right panel {% endcomment %}
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Log in as User.?</h3>
+                <p>File complaints and connect to people while contributing to cleaniness.</p>
+                <button class="btn transparent" id="sign-in-btn">Continue</button>
+            </div>
+            </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+{% comment %} all javascript files are here {% endcomment %}
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+
+    sign_up_btn.addEventListener('click', () =>{
+        container.classList.add("sign-up-mode");
+    });
+
+    sign_in_btn.addEventListener('click', () =>{
+        container.classList.remove("sign-up-mode");
+    }); 
+  </script>
+
+
+
+
+
+</body>
+</html>
