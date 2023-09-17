@@ -1,0 +1,38 @@
+#path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',views.activate,name='activate')
+
+
+comment --> this is the basic template code for signin DONT TOUCH it
+
+{% comment %} {%for message in messages %}
+<div class="alert alert-{{ messages.tags}} alert-dismissible fade show" role="alert">
+    <strong>Message: </strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times</span>
+    </button>
+</div>
+{%endfor%}
+<h3>SIGN IN</h3>
+<form action="/signin" method ="post">
+{% csrf_token %}
+    <label for="">Username</label>
+    <input type="text" id="username" name="username" placeholder="enter your username" Required>
+    <br>
+    <label for="">Password</label>
+    <input type="password" id="pass1" name="pass1" placeholder="enter your password" Required>
+    <br>
+    <button type="submit">Sign in</button>
+</form> {% endcomment %}
+
+{% comment %} notification section  {% endcomment %}
+
+
+
+
+comment --> this the basic template of index.html
+                {%if user.is_authenticated%}
+                <h3>Hello {{ fname}}</h3>
+                <button type="submit"><a href="/signout">SignOut</a></button>
+                {% else %}
+                <button type="submit"><a href="/signup">SignUp</a></button>
+                <button type="submit"><a href="/signin">SignIn</a></button>
+                {%endif%}
