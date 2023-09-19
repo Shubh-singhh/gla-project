@@ -42,7 +42,7 @@ def signup(request):
              messages.error(request,"Email already registered")
              return redirect('signin')
         
-        if len(username) >10:
+        if len(username) >20:
              messages.error(request,"Username must be under 10 characters")
         
         if pass1 !=pass2:
