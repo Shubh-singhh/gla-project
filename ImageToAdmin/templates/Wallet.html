@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community engagement</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/wallet.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" >
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="logo">Community</h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" id="sec" placeholder="search"> 
+            </div>
+            <li>
+                <a class="menu-item" id="notification" href="#">
+                    <i class="uil uil-envelope"><small class="notification-count">9+</small></i>
+                    
+                </a>
+            </li>
+            <div class="create">
+                <label class="btn btn-primary" for="cerat a post"> Organise</label>
+                <div class="profile-photo">
+                    <img src="{% static 'img/users.jpg' %}" alt="">
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <main >
+        <div class="container">
+        <!-- Left -->
+        <div class="left">
+            <a href="#" class="profile">
+                <div class="profile-photo">
+                    <img src="{% static 'img/users.jpg' %}" alt="">
+                </div>
+                <div class="handel">
+                    <a href="{% url 'Profile' %}"><h4>Shinan007<i class="uil-pen"></i></h4></a>
+                    <p class="text-muted">bio...      </p>
+                </div>
+            </a>
+            <!-- Side baar -->
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a class="menu-item active" href="{% url 'YourPost' %}">
+                            <i class="uil uil-edit"></i>
+                            <span><h3>Your Posts</h3></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'Event' %}">
+                            <i class="uil uil-home"></i>
+                            <span><h3>Events</h3></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'Wallet' %}">
+                            <i class="uil uil-globe"></i>
+                            <span><h3>Wallet</h3></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'Complain' %}">
+                            <i class="uil uil-user-location"></i>
+                            <span><h3>Complain</h3></span>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a class="menu-item" href="{% url 'leaderboard' %}">
+                            <i class="uil uil-calendar-alt"></i>
+                            <span><h3>Leaderboard</h3></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'index' %}">
+                            <i class="uil uil-book-reader"></i>
+                            <span><h3>Feedback</h3></span>
+                        </a>
+                    </li>
+                   
+                   
+                    
+                    <li>
+                        <a class="menu-item" href="{% url 'index' %}">
+                            <i class="uil uil-setting"></i>
+                            <span><h3>Logout</h3></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Side Bar -->
+            <!-- <label for="create-post" class="btn btn-primary">Create Post</label> -->
+            <a href="{% url 'CreatePost' %}"><label for="create-post" class="btn btn-primary">Create Post</label></a>
+
+        </div>
+        <!-- Mid -->
+        <div class="middle">
+            <div class="wrapper">
+                <div class="right">
+                    <div class="containers">
+
+                        <h1 class="tops">Wallet</h1>
+                        <div class="wallet-box">
+                            <div class="card">
+                                <h2>Points.</h4>
+                                <h1>9.00 pts</h1>
+                                <div class="points-summary">
+                                    <h3 class="summary-header">Summary</h3>
+                                    <h3 class="summary-header">September</h3>
+                                    <h4>Complain</h4>
+                                    <h3>0.00 pts</h3>
+                                    <h4>Feed</h4>
+                                    <h3>0.00 pts</h3>
+                                    <h4>Bussiness</h4>
+                                    <h3>0.00 pts</h3>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h2>E-Rupee.</h4>
+                                <h1>35.00 INR</h1>
+                                <div class="points-summary">
+                                    <h3 class="summary-header">Summary</h3>
+                                    <h3 class="summary-header">September</h3>
+                                    <h4>Complain</h4>
+                                    <h3>10.00 INR</h3>
+                                    <h4>Feed</h4>
+                                    <h3>7.00 INR</h3>
+                                    <h4>Bussiness</h4>
+                                    <h3>18.00 INR</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="tops">Redeem Coupans</h1>
+                        <div class="vouchers">
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="vouchers">
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                            <div class="card1">
+                                <div class="imgg">
+                                    <img src="{% static 'img/dove.jpeg' %}" alt="">
+                                </div>
+                               <div class="b-border">
+                                    <p>Vita Rich</p>
+                                    <h2>$ 793</h2>
+                               </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                </div>
+                </div>
+                <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+        </div>
+        <!-- Right -->
+    </div>
+    </main>
+</body>
+</html>
